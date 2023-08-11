@@ -60,7 +60,7 @@ export function ButtonBack() {
         <>
             <Link href={'/App/KendaraanDinas/'} >
                 <button className={CD['ButtonBack']} >
-                    &#x2715; {asu}
+                    &#x2715;
                 </button>
             </Link>
 
