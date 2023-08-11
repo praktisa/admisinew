@@ -1,0 +1,120 @@
+.CardPosition{
+    position: relative;
+    top: 0;
+    left:0;
+    transition: 0.4s ease ;
+}
+
+.CardLayout{
+ 
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    box-shadow: var(--Shadow);
+
+    overflow: hidden;
+    transition: 0.4s ease ;
+    position: relative;
+    top: 0;
+    left:0;
+}
+
+
+.Layout__img{
+    grid-area: img;
+    /* background: red; */
+    /* overflow: hidden; */
+    width: 100%;
+    height: 250px;
+    position: relative;
+}
+
+.IMG{
+    object-fit: cover;
+    width: 100% !important;
+    /* object-fit: contain; */
+    
+    /* position: relative !important; */
+    /* height: unset !important; */
+}
+
+
+
+
+.Layout__act{
+    /* grid-area: act; */
+    /* background: #eaeaea;
+    color: #121212; */
+    display: grid;
+    grid-template-areas: "name pinjam";
+    grid-template-columns: 0.7fr 0.35fr;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    background: rgba(238, 78, 52, 0.5);
+    /* border-radius: 16px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(238, 78, 52, 0.3);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    color: var(--TypoStill);
+   
+}
+
+.Layout__CarName{
+    grid-area: name;
+    padding: 12px 10px;
+    
+}
+
+.Layout__Button{
+    grid-area: pinjam;
+}
+
+
+.CarName{
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+
+}
+
+.CarPLAT{
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0.5;
+    letter-spacing: -0.3px;
+}
+
+.Layout__Button{
+    /* background: red; */
+    display: grid;
+    place-items: center;
+}
+
+.Layout__Button button{
+    all: unset;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background: #121212;
+    color: #eaeaea;
+}
+
+.Terpinjam{
+   position: absolute; 
+   top: 0;
+   left:0;
+   width: 100%;
+   height: 100%;
+
+   display: grid;
+   place-items: center;
+
+   background: #12121280;
+    /* filter: blur(3px); */
+}

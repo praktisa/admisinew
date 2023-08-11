@@ -1,0 +1,44 @@
+.PopUpForm{
+    display: grid;
+    align-items: center;
+
+    background: var(--GlassBG);
+    backdrop-filter: blur(6.8px);
+    -webkit-backdrop-filter: blur(6.8px);
+    text-align: center;
+    /* width: 50%; */
+    
+    cursor: pointer;
+
+    border-radius: 4px;
+}
+
+.ActionForm{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    /* background: blue; */
+}
+
+.ActionForm div{
+    display: grid;
+    
+}
+
+.ButtonBack{
+     background: var(--GlassBG);
+     backdrop-filter: blur(6.8px);
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    top: 3%;
+    right: 5%;
+
+    display: grid;
+    place-items: center;
+
+    z-index: 99;
+    cursor: pointer;
+}
+

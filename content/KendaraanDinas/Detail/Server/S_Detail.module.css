@@ -1,0 +1,83 @@
+
+.Layout{
+    z-index: 2;
+   
+
+    position: absolute;
+ 
+    top: 0;
+    left: 0;
+    
+    text-align: center;
+
+
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 1fr 0.6fr;
+    grid-template-areas: ". . Head .";
+    width: 100%;
+   
+    color: var(--GlassTypo);
+
+    will-change: transform;
+    transform: translateY(-100%);
+    transform-origin: top center;
+    animation: Show 0.3s ease 0.8s forwards;
+    
+}
+
+.Left, .Right{
+    box-shadow: 0 -23px 0 0 var(--GlassBG);
+    background: transparent;
+   
+}
+
+.Layout .Left{
+    border-radius: 0 25px 6.8px 0;
+}
+
+.Layout .Right{
+    border-radius: 25px 0 6.8px 0;
+}
+
+.HeadDetail{
+    grid-area: Head;
+    background: var(--GlassBG);
+    border-radius: 0 0 23px 23px;
+    padding: 7px 0;
+
+
+
+}
+
+@keyframes Show {
+    0%{
+        transform: translateY(-100%);
+        transform: scale(0);
+    }
+    100%{
+        transform: translateY(0);
+        transform: scale(1);
+    }
+}
+
+
+.LayoutOption{
+    z-index: 2;
+   
+
+    position: absolute;
+    
+    width: 49%;
+    height: 100%;
+    top: 0;
+    left:0;
+
+    padding: 25px;
+
+    
+    display: grid;
+  
+   
+}
+
+

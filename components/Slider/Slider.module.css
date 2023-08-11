@@ -1,0 +1,79 @@
+
+.SliderContainer{
+    /* slider responsive memfullkan lebar dan tinggi untuk menangkap luas slides yang 100% */
+    display: grid;
+   
+}
+
+.Slider { 
+    /* grid, posisi dan menyesuaikan luas container  */ 
+    width: 100%;
+    display: grid;
+    grid-template-rows: 0.1fr 0.9fr;    
+    grid-template-areas: "Nav" "Slides";
+
+     background: var(--GlassBG);
+     backdrop-filter: blur(6.8px);
+    -webkit-backdrop-filter: blur(6.8px);
+     padding: 10px;
+    border-radius: 8px;
+}
+
+.SliderNav{
+    /* background: green; */
+    grid-area: Nav;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.SliderNav div{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--Act);
+
+    display: grid;
+    place-items: center;
+}
+
+.Slides {
+    grid-area: Slides;
+    display: flex;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+
+    /* background: red; */
+    
+    align-self: start;
+}
+
+.SlidesGroup{
+
+   
+    width: 100%;
+
+    display: grid;
+    gap: 15px;
+}
+
+.SlidesGroup h3{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.Slides > div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+

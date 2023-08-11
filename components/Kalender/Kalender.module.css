@@ -1,0 +1,154 @@
+
+.layout{
+
+    user-select: none;
+    padding: 7px;
+
+    /* height: 100%; */
+    border-radius: 16px;
+
+     background: rgba(250, 251, 252, 0.5);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.8px);
+    -webkit-backdrop-filter: blur(6.8px);
+    border: 1px solid rgba(250, 251, 252, 0.3);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    color: #121212;
+}
+
+
+
+.layout__tanggal{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    
+    text-align: center;
+    gap: 5px;
+    column-gap: 0;
+
+    place-items: center;
+}
+
+.layout__tanggal div{
+    width: 45px;
+    height: 45px;
+    font-size: 19px;
+    display: grid;
+    place-items: center;
+}
+
+.none{
+    display: none;
+}
+
+.terpilih{
+     background: #212121;
+     color: #eaeaea
+}
+
+.terbooking{
+   
+    opacity: 0.3;
+}
+
+.tidakTerpilih:hover{
+    /* border: 2px solid #eaeaea; */
+    background: #21212150;
+}
+
+.tanggal__display{
+     width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 19px;
+    
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.8s ease;
+    /* border: 2px solid transparent; */
+}
+
+.BedaBulan{
+     
+    opacity: 0.3;
+}
+
+.Terpinjam{
+    background: #212121;
+    position: relative;
+}
+
+.Terpinjam::after{
+    content: attr(data-peminjam);
+    font-size: small;
+    font-weight: lighter;
+    top: 0;
+    opacity: 0;
+    position: absolute;
+    transition: 0.2s ease;
+}
+
+
+.Terpinjam:hover::after{
+    top: -18px;
+    opacity: 1;
+}
+
+.HariIni{
+    position: relative;
+    background: #21212150;
+}
+
+.HariIni::after{
+    content: 'hari ini';
+    font-size: small;
+    font-weight: lighter;
+    top: 0;
+    opacity: 0;
+    position: absolute;
+    transition: 0.2s ease;
+  
+}
+
+.HariIni:hover::after{
+    top: -18px;
+    opacity: 1;
+}
+
+
+
+
+.layout__header{
+    
+    display: grid;
+    grid-template-columns: 0.97fr 0.01fr 0.01fr 0.01fr;
+    align-items: center;
+    gap: 5px;
+    padding: 12px 0 12px 15px;
+}
+
+.arrow{
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    /* background: #eaeaea30; */
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.arrow:hover{
+   
+    background: #21212150;
+   
+}
+
+.Peminjam{
+    font-size: 15px !important;
+    font-weight: bold;
+    opacity: 0.5;
+}
