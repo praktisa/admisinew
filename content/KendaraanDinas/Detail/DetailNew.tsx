@@ -1,10 +1,12 @@
 import React from 'react'
 import { HeadDetail, LayoutForm } from '@/content/KendaraanDinas/Detail/Server/S_Detail'
+import { Slider, SlidesBody, SlidesFooter, SlidesGroup, SlidesNavManual } from '@/components/Slider/Slider'
+import { ButtonBack } from './Client/C_Detail'
+
 import ImageFill from '@/components/Image/ImageFill'
-import { Slider, SlidesGroup } from '@/components/Slider/Slider'
 import TextArea from '@/components/Input/TextArea/TextArea'
 import Kalender from '@/content/Kalender/KalenderCookie'
-import { ButtonBack } from './Client/C_Detail'
+
 
 
 interface Detail_Inter {
@@ -24,22 +26,37 @@ export default function DetailNew({ data, terpinjam }: Detail_Inter) {
 
 
             <LayoutForm >
+
                 <Slider>
 
                     <SlidesGroup title={"Pilih Tanggal"}>
-                        <Kalender />
+
+                        <SlidesBody>
+                            <Kalender />
+                        </SlidesBody>
+
+                        <SlidesFooter>
+                            <div></div>
+                            <SlidesNavManual goto={1}>Lanjut &#8594;</SlidesNavManual>
+                        </SlidesFooter>
+
                     </SlidesGroup>
 
-                    <SlidesGroup title={"Pilih Lokasi"}>
-                        <TextArea label={""} rows={17} />
-                    </SlidesGroup>
+                    <SlidesGroup title={"Lokasi dan Tujuan"}>
 
-                    <SlidesGroup title={"Tujuan Pinjam"}>
-                        <TextArea label={"Tujuan pinjam"} rows={17} />
-                    </SlidesGroup>
+                        <SlidesBody>
+                            <TextArea label={"Lokasi"} rows={0} />
+                            <TextArea label={"Tujuan Pinjam"} rows={0} />
+                        </SlidesBody>
 
+                        <SlidesFooter>
+                            <SlidesNavManual goto={0}>&#8592; Sebelum</SlidesNavManual>
+                            <div>Simpan</div>
+                        </SlidesFooter>
+                    </SlidesGroup>
 
                 </Slider>
+
             </LayoutForm>
 
             <ButtonBack />

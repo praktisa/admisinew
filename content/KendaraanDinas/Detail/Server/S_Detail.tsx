@@ -36,7 +36,7 @@ export function LayoutForm({ children }: LayoutOption__inter) {
 
     return (
         <>
-            <div className={SD['LayoutOption']} >
+            <div className={SD['LayoutForm']} >
                 {children}
             </div>
         </>

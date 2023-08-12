@@ -16,7 +16,7 @@
   --Shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 
   --GlassTypo: #121212;
-  --GlassBG: #fafbfc50;
+  --GlassBG: #fafbfc70;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,7 +29,7 @@
     --Error:#B00020;
 
     --GlassTypo: #fafbfc;
-    --GlassBG: #12121250;
+    --GlassBG: #12121270;
   }
 }
 

@@ -2,21 +2,26 @@
 .SliderContainer{
     /* slider responsive memfullkan lebar dan tinggi untuk menangkap luas slides yang 100% */
     display: grid;
-   
+    
 }
+
 
 .Slider { 
     /* grid, posisi dan menyesuaikan luas container  */ 
     width: 100%;
     display: grid;
-    grid-template-rows: 0.1fr 0.9fr;    
-    grid-template-areas: "Nav" "Slides";
+    /* grid-template-rows: 0.1fr 0.9fr; */
+    grid-template-rows: 1fr;    
+    grid-template-areas: "Slides";
 
-     background: var(--GlassBG);
-     backdrop-filter: blur(6.8px);
-    -webkit-backdrop-filter: blur(6.8px);
-     padding: 10px;
+    background: var(--GlassBG);
+     /* backdrop-filter: blur(6.8px);
+    -webkit-backdrop-filter: blur(6.8px); */
+    padding: 10px;
     border-radius: 8px;
+    align-items: start;
+
+        
 }
 
 .SliderNav{
@@ -31,7 +36,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 2px solid var(--Act);
+    background: var(--Act);
 
     display: grid;
     place-items: center;
@@ -49,31 +54,54 @@
     /* background: red; */
     
     align-self: start;
+    height: 100%;
 }
 
 .SlidesGroup{
-
-   
-    width: 100%;
-
+    
     display: grid;
-    gap: 15px;
+    grid-template-areas: "head" "body" "foot";
+    grid-template-rows: 0.1fr 0.9fr 0.1fr;
+
+    width: 100%;
+    height: 100%;
+    
 }
 
 .SlidesGroup h3{
-    margin-top: 10px;
+    grid-area: head;
+    margin-top: 5px;
     text-align: center;
 }
 
-.Slides > div {
-  scroll-snap-align: start;
-  flex-shrink: 0;
-  width: 100%;
-  height: 100%;
+.Slides > div { 
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
   
-  display: flex;
-  justify-content: center;
-  align-items: center;
- 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
+.SlidesBody{
+    grid-area: body;
+   
+    display: grid;
+    gap: 15px;
+    height: 100%;
+}
+
+.SlidesFooter{
+    grid-area: foot;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-areas: "left right";
+    gap: 15px;
+    padding: 10px;
+    text-align: center;
+    /* width: 100%; */
+}

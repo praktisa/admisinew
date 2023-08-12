@@ -53,13 +53,14 @@ export function ButtonBack() {
     const router = useRouter()
     const Kembali = useCallback((e: any) => {
         e.preventDefault()
-        router.push("http://localhost:3000/App/KendaraanDinas/")
+        // router.push("http://localhost:3000/App/KendaraanDinas/")
+        router.back()
     }, [router])
 
     return (
         <>
             <Link href={'/App/KendaraanDinas/'} >
-                <button className={CD['ButtonBack']} >
+                <button className={CD['ButtonBack']} onClick={Kembali}>
                     &#x2715;
                 </button>
             </Link>

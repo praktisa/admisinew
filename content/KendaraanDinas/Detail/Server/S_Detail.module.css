@@ -12,7 +12,7 @@
 
 
     display: grid;
-    grid-template-columns: 1fr 1.4fr 1fr 0.6fr;
+    grid-template-columns: 1fr 1.4fr 1.3fr 0.5fr;
     grid-template-areas: ". . Head .";
     width: 100%;
    
@@ -61,7 +61,7 @@
 }
 
 
-.LayoutOption{
+.LayoutForm{
     z-index: 2;
    
 
@@ -76,8 +76,24 @@
 
     
     display: grid;
-  
-   
+    will-change: transform;
+    animation: UP 0.3s ease 0.8s forwards;
+    transform: translateY(100%);
+    transform-origin: left bottom;
 }
+
+@keyframes UP {
+    0%{
+        transform: translateY(100%);
+        transform: scale(0);
+    }
+
+      100%{
+        transform: translateY(0);
+        transform: scale(1);
+    }
+}
+
+
 
 

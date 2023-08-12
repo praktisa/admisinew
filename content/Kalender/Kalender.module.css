@@ -100,7 +100,7 @@
 
 .HariIni{
     position: relative;
-    background: var(--ActHover);
+    background: var(--Surface);
 }
 
 .HariIni::after{

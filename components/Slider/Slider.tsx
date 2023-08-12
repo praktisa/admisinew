@@ -1,5 +1,7 @@
 import React, { Children } from 'react'
 import SD from './Slider.module.css'
+import Structure from '../CTA/Structure'
+// import Link from 'next/link'
 
 
 interface Slider__inter {
@@ -16,6 +18,7 @@ export function Slider({ children, withNav = true }: Slider__inter) {
     let ArrChild = Children.toArray(children)
 
     function SlideItem({ type }: { type: string }) {
+
         return (
             <>
                 {
@@ -26,6 +29,7 @@ export function Slider({ children, withNav = true }: Slider__inter) {
                                     {ac}
                                 </div>
                             )
+
                         } else if (type === 'nav') {
                             return (
                                 <a href={'#s' + i} key={'href' + i}>
@@ -50,9 +54,9 @@ export function Slider({ children, withNav = true }: Slider__inter) {
                         <SlideItem type={'item'} />
                     </div>
 
-                    <div className={SD['SliderNav']} >
+                    {/* <div className={SD['SliderNav']} >
                         <SlideItem type={'nav'} />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </>
@@ -71,5 +75,57 @@ export function SlidesGroup({ children, title }: SlidesGroup__inter) {
             <h3>{title}</h3>
             {children}
         </span>
+    )
+}
+
+interface SlidesBody__inter {
+    children?: React.ReactNode
+}
+
+export function SlidesBody({ children }: SlidesBody__inter) {
+
+
+    return (
+        <>
+            <div className={`${SD['SlidesBody']}`} >
+                {children}
+            </div>
+        </>
+    )
+}
+
+interface SlidesFooter__inter {
+    children?: React.ReactNode
+}
+
+export function SlidesFooter({ children }: SlidesFooter__inter) {
+
+    let ArrChild = Children.toArray(children)
+
+    return (
+        <>
+            <div className={`${SD['SlidesFooter']}`} >
+                {ArrChild[0]}
+                {ArrChild[1]}
+            </div>
+        </>
+    )
+}
+
+interface SlidesNavManual__inter {
+    children?: React.ReactNode
+    goto: number
+}
+
+export function SlidesNavManual({ children, goto }: SlidesNavManual__inter) {
+    return (
+        <>
+            <a href={'#s' + goto} >
+                <Structure style={'contained'}>
+                    {children}
+                </Structure>
+            </a>
+        </>
+
     )
 }
