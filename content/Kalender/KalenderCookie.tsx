@@ -14,7 +14,14 @@ interface Peminjam {
     children: React.ReactNode
 }
 
-export default function Kalender({ terpinjam = [], onClose }: any) {
+interface Kalender__inter {
+    terpinjam?: any,
+
+}
+
+export default function Kalender({ terpinjam = [] }: Kalender__inter) {
+
+    console.log("Tanggal dari Database", terpinjam)
 
     const { CurrentDate, ChosenDate, HeadCalendar, CreateCalendar, ChangeMonth, ChoseDate } = useCalendar(new Date())
 
@@ -25,9 +32,9 @@ export default function Kalender({ terpinjam = [], onClose }: any) {
         setCookie("kalender", ChosenDate)
     }, [ChosenDate])
 
-    useEffect(() => {
+    useEffect(() => { // useState masukan kedalam if terpinjam (karena ada BUG sehingga tidak dapat navigasi)
         let ArrObj = []
-        if (terpinjam.length != 0) {
+        if (terpinjam.length > 0) {
             for (var i = 0; i < terpinjam.length; i++) {
                 let StringTanggal = JSON.parse(terpinjam[i]['STR_TGL'])
 
@@ -40,9 +47,10 @@ export default function Kalender({ terpinjam = [], onClose }: any) {
                     ArrObj.push(DataKonversi)
                 }
             }
-        }
 
-        setDataterpinjam(ArrObj)
+
+            setDataterpinjam(ArrObj)
+        }
     }, [terpinjam])
 
     function Peminjam({ children }: Peminjam) {
@@ -135,7 +143,6 @@ export default function Kalender({ terpinjam = [], onClose }: any) {
                                                     </label>
                                                 </>
                                         }
-
 
                                     </div>
                                 </Fragment>

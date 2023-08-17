@@ -4,10 +4,10 @@ import NC from './NavContainer.module.css'
 
 interface children {
   children: React.ReactNode
-
+  logout: React.ReactNode
 }
 
-export default function S_NavContainer({ children }: children) {
+export default function S_NavContainer({ children, logout }: children) {
   return (
     <>
       <div className={NC['layout']}>
@@ -21,8 +21,7 @@ export default function S_NavContainer({ children }: children) {
         </span >
 
         <span className={NC['layout__footer']}>
-          {/* <ButtonLogout /> */}
-          Logout
+          {logout}
         </span>
 
       </div>

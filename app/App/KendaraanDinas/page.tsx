@@ -1,4 +1,4 @@
-import GetListKDAll from '@/app/Api/KendaraanDinas/ListKD/static/GetListKDAll'
+import GetListKDAll from '@DB_KendaraanDinas/GetListKDAll'
 import CardKD from '@/components/Card/CardKendaraanDinas/CardKD'
 import Link from 'next/link'
 import React from 'react'
@@ -11,14 +11,16 @@ interface DataMobil {
 
 export default async function Page() {
 
-    const ListMobil = await GetListKDAll()
+    const ListMobil = await GetListKDAll(false)
 
     return (
         <>
 
             {
-                ListMobil.map((mob: any, i: number) => {
-                    let kd: string = mob.STR_PLAT.replaceAll(" ", "")
+                ListMobil.length > 0 &&
+
+                ListMobil?.map((mob: any, i: number) => {
+                    let kd: string = mob?.STR_PLAT.replaceAll(" ", "")
 
                     return (
 

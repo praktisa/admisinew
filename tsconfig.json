@@ -24,7 +24,8 @@
       "@/*": ["./*"],
       "@components/*": ["./components/*"],
       "@content/*": ["./content/*"],
-      "@Connection": ["./database/Connection"]
+      "@Connection": ["./database/Connection"],
+      "@DB_KendaraanDinas/*": ["./database/_static/KendaraanDinas/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

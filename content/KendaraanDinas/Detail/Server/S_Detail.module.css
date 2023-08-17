@@ -73,7 +73,7 @@
     left:0;
 
     padding: 25px;
-
+    /* background: blue; */
     
     display: grid;
     will-change: transform;

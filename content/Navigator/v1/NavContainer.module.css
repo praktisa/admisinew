@@ -60,20 +60,20 @@
 .layout__footer{
     grid-area: footer;
     display: grid;
-    place-items: center;
+    align-items: center;
 }
 
 .layout__footer div{
     padding: 8px 15px;
-    border: 2px solid #E50914;
+    /* border: 2px solid var(--Error); */
     background: transparent;
-    opacity: 0.2;
+    opacity: 0.1;
     transition: 0.4s ease;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .layout__footer div:hover{
-    background:  #E50914;
+    background:  var(--Error);
     opacity: 1;
 }

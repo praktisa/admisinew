@@ -51,19 +51,19 @@ export function ActionForm() {
 export function ButtonBack() {
 
     const router = useRouter()
-    const Kembali = useCallback((e: any) => {
-        e.preventDefault()
-        // router.push("http://localhost:3000/App/KendaraanDinas/")
+    const Kembali = useCallback(() => {
         router.back()
+        // router.push('/App/KendaraanDinas')
+
     }, [router])
 
     return (
         <>
-            <Link href={'/App/KendaraanDinas/'} >
-                <button className={CD['ButtonBack']} onClick={Kembali}>
-                    &#x2715;
-                </button>
-            </Link>
+            {/* <Link href={'/App/KendaraanDinas/'} > */}
+            <button className={CD['ButtonBack']} onClick={Kembali}>
+                &#x2715;
+            </button>
+            {/* </Link> */}
 
         </>
     )

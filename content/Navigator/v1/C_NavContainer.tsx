@@ -44,6 +44,7 @@ export default function C_NavContainer() {
                 href={`/App/${men.href}`}
                 style='navigation'
                 activePath={usePathname()}
+                prefetch={true}
               >
                 {men.display}
               </CustomLink>

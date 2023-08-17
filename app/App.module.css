@@ -10,13 +10,13 @@
 .AppRoot__Nav{
   
     padding: 0 30px;
-    
+   
 }
 
 .AppRoot__Content{
   
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
   
     padding: 28px;
    

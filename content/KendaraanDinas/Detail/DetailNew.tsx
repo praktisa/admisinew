@@ -12,10 +12,11 @@ import Kalender from '@/content/Kalender/KalenderCookie'
 interface Detail_Inter {
     data: any
     terpinjam: any
+    tag: string
 }
 
 
-export default function DetailNew({ data, terpinjam }: Detail_Inter) {
+export default function DetailNew({ data, terpinjam, tag }: Detail_Inter) {
     const { STR_NAMA, STR_PLAT, STR_IMG } = data
 
 
@@ -32,12 +33,13 @@ export default function DetailNew({ data, terpinjam }: Detail_Inter) {
                     <SlidesGroup title={"Pilih Tanggal"}>
 
                         <SlidesBody>
-                            <Kalender />
+                            <Kalender terpinjam={terpinjam} />
+                            {/* <div>Halo</div> */}
                         </SlidesBody>
 
                         <SlidesFooter>
                             <div></div>
-                            <SlidesNavManual goto={1}>Lanjut &#8594;</SlidesNavManual>
+                            <SlidesNavManual goto={1} tag={tag}>Lanjut &#8594;</SlidesNavManual>
                         </SlidesFooter>
 
                     </SlidesGroup>
@@ -50,7 +52,7 @@ export default function DetailNew({ data, terpinjam }: Detail_Inter) {
                         </SlidesBody>
 
                         <SlidesFooter>
-                            <SlidesNavManual goto={0}>&#8592; Sebelum</SlidesNavManual>
+                            <SlidesNavManual goto={0} tag={tag} >&#8592; Sebelum</SlidesNavManual>
                             <div>Simpan</div>
                         </SlidesFooter>
                     </SlidesGroup>

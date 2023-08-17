@@ -25,7 +25,7 @@ export default function useCalendar(dateData: Date) {
       ArrayTanggal.push(CreateTanggal)
       index++
     }
-    console.log("BUAT KALENDER", bulan, tahun)
+    // console.log("BUAT KALENDER", bulan, tahun)
 
     return ArrayTanggal
   }

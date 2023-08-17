@@ -1,0 +1,31 @@
+.layout{
+    border-collapse: collapse;
+    position: relative;
+}
+
+.layout thead{
+    position: sticky;
+    top: 0;
+   
+
+    /* From https://css.glass */
+    background: rgba(16, 16, 16, 0.85);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.3px);
+    -webkit-backdrop-filter: blur(11.3px);
+}
+
+.layout td, .layout th{
+    padding: 10px ;
+    transition: 0.4s ease;
+}
+
+.layout tr{
+   transition: 0.4s ease;
+}
+
+.layout tr:hover{
+    background: #eaeaea20;
+}
+

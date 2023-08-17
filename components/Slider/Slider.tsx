@@ -1,7 +1,7 @@
 import React, { Children } from 'react'
 import SD from './Slider.module.css'
 import Structure from '../CTA/Structure'
-// import Link from 'next/link'
+import Link from 'next/link'
 
 
 interface Slider__inter {
@@ -115,16 +115,28 @@ export function SlidesFooter({ children }: SlidesFooter__inter) {
 interface SlidesNavManual__inter {
     children?: React.ReactNode
     goto: number
+    tag: string
 }
 
-export function SlidesNavManual({ children, goto }: SlidesNavManual__inter) {
+export function SlidesNavManual({ children, goto, tag }: SlidesNavManual__inter) {
     return (
         <>
-            <a href={'#s' + goto} >
-                <Structure style={'contained'}>
-                    {children}
-                </Structure>
-            </a>
+            {
+                tag === 'link'
+                    ?
+                    <Link href={'#s' + goto} replace>
+                        <Structure style={'contained'}>
+                            {children}
+                        </Structure>
+                    </Link>
+                    :
+                    <a href={'#s' + goto}>
+                        <Structure style={'contained'}>
+                            {children}
+                        </Structure>
+                    </a>
+            }
+
         </>
 
     )

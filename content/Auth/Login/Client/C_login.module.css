@@ -1,0 +1,89 @@
+.OTPLayout{
+    
+    
+   
+  
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid  #212121;
+    
+}
+
+.OTP{
+    display: flex;
+    gap: 10px;
+    justify-content:space-evenly;
+    
+}
+
+.OPTInput{
+    text-align: center;
+    background: transparent;
+    color: var(--Typo);
+    /* border: 2px solid  #212121; */
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+   
+    font-size: 3vw;
+
+    transition: 0.4s ease;
+    /* background: #eaeaea; */
+
+   
+}
+
+.OPTInput:not(:empty){
+
+    border: 2px solid  var(--Act);
+    
+
+   
+}
+
+.OPTInput::placeholder{
+    opacity:0.8;
+}
+
+.Notif{
+    background: var(--BG);
+
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 0%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+
+    z-index: 9;
+    transition: 0.4s ease;
+}
+
+.Proses{
+
+    animation: LiftUp 0.4s ease ;
+    height: 100%;
+ 
+}
+
+@keyframes LiftUp {
+    0%{
+        height: 0%;
+    }
+
+    100%{
+        height: 100%;
+    }
+}
+
+.Success{
+    background: var(--Success);
+}
+
+.Error{
+    background: var(--Error);
+}
